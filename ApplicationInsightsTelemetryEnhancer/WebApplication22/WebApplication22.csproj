@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>67704dc0-d832-409e-ac30-d461719bb3af</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/4c55db32-45c4-48d5-986c-2a2e7eac611a/resourcegroups/Teller/providers/Microsoft.Insights/components/TelemetryEnhancerTest</ApplicationInsightsResourceId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.13.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationInsightsTelemetryEnhancer22\ApplicationInsightsTelemetryEnhancer22.csproj" />
+  </ItemGroup>
+
+</Project>

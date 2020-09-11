@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication31", "WebAppl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication22", "WebApplication22\WebApplication22.csproj", "{C696357A-2151-44F2-AA0B-3D023447A2FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationInsightsTelemetryEnhancer22", "ApplicationInsightsTelemetryEnhancer22\ApplicationInsightsTelemetryEnhancer22.csproj", "{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C696357A-2151-44F2-AA0B-3D023447A2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C696357A-2151-44F2-AA0B-3D023447A2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C696357A-2151-44F2-AA0B-3D023447A2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
