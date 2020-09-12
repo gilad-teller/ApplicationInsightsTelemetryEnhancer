@@ -42,7 +42,7 @@ namespace WebApplication22
             //You can set a custom header by hard coding it with the options action:
             //services.AddOperationIdHeader(options => 
             //{
-            //    options.HeaderName = "MyHeader";
+            //    options.HeaderName = "HeaderOptions";
             //});
 
             //To add request + response body to dependencies with default values, use AddDependencyTelemetryEnhancer without any parameters
@@ -64,11 +64,11 @@ namespace WebApplication22
             //services.AddRequestTelemetryEnhancer(Configuration.GetSection("RequestTelemetryEnhancer"));
 
             //To set custom keys to your request telemetry, you can use the options action.
-            services.AddRequestTelemetryEnhancer(options =>
-            {
-                options.RequestPropertyKey = "RequestOptions";
-                options.ResponsePropertyKey = "ResponseOptions";
-            });
+            //services.AddRequestTelemetryEnhancer(options =>
+            //{
+            //    options.RequestPropertyKey = "RequestOptions";
+            //    options.ResponsePropertyKey = "ResponseOptions";
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

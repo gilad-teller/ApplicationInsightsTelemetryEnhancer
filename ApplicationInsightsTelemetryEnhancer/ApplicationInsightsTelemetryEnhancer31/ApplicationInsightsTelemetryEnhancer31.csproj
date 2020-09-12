@@ -1,26 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>2.2.0</Version>
-    <Authors>Gilad Teller</Authors>
-    <Product>Application Insights Telemetry Enhancer</Product>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>ApplicationInsightsTelemetryEnhancer</PackageId>
+    <Version>3.1.0</Version>
+    <Authors>Gilad Teller</Authors>
+    <Company>Gilad Teller</Company>
+    <Product>Application Insights Telemetry Enhancer</Product>
     <Description>Enhancing Microsoft Azure Application Insights Telemetry with request and response body for your application enpoints and for any HTTP dependency.</Description>
     <PackageProjectUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</RepositoryUrl>
     <RepositoryType>Git Hub</RepositoryType>
     <PackageTags>Application Insights ApplicationInsights Telemetry Azure Request Response Body</PackageTags>
-    <PackageReleaseNotes>For use with ASP.Net Core 2.2</PackageReleaseNotes>
+    <PackageReleaseNotes>For use with ASP.Net Core 3.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.14.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
   </ItemGroup>
 
 </Project>

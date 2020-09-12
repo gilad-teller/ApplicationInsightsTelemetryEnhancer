@@ -9,7 +9,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationInsightsTelemetryEnhancer22
+namespace ApplicationInsightsTelemetryEnhancer31
 {
     public class RequestTelemetryEnhancer
     {
@@ -42,12 +42,10 @@ namespace ApplicationInsightsTelemetryEnhancer22
             try
             {
                 httpContext.Request.EnableBuffering();
-                using (StreamReader reader = new StreamReader(httpContext.Request.Body, Encoding.UTF8, true, 1024, true))
-                {
-                    string requestBody = await reader.ReadToEndAsync();
-                    httpContext.Request.Body.Position = 0;
-                    return requestBody;
-                }
+                using StreamReader reader = new StreamReader(httpContext.Request.Body, Encoding.UTF8, true, 1024, true);
+                string requestBody = await reader.ReadToEndAsync();
+                httpContext.Request.Body.Position = 0;
+                return requestBody;
             }
             catch
             {
@@ -60,23 +58,19 @@ namespace ApplicationInsightsTelemetryEnhancer22
             Stream originalBody = httpContext.Response.Body;
             try
             {
-                using (MemoryStream memoryStream = new MemoryStream())
+                using MemoryStream memoryStream = new MemoryStream();
+                httpContext.Response.Body = memoryStream;
+                await _next(httpContext);
+                if (httpContext.Response.StatusCode == StatusCodes.Status204NoContent)
                 {
-                    httpContext.Response.Body = memoryStream;
-                    await _next(httpContext);
-                    if (httpContext.Response.StatusCode == StatusCodes.Status204NoContent)
-                    {
-                        return null;
-                    }
-                    memoryStream.Position = 0;
-                    using (StreamReader streamReader = new StreamReader(memoryStream))
-                    {
-                        string responseBody = await streamReader.ReadToEndAsync();
-                        memoryStream.Position = 0;
-                        await memoryStream.CopyToAsync(originalBody);
-                        return responseBody;
-                    }
+                    return null;
                 }
+                memoryStream.Position = 0;
+                using StreamReader streamReader = new StreamReader(memoryStream);
+                string responseBody = await streamReader.ReadToEndAsync();
+                memoryStream.Position = 0;
+                await memoryStream.CopyToAsync(originalBody);
+                return responseBody;
             }
             catch
             {
@@ -93,7 +87,7 @@ namespace ApplicationInsightsTelemetryEnhancer22
     {
         public static IServiceCollection AddRequestTelemetryEnhancer(this IServiceCollection services, Action<RequestTelemetryEnhancerOptions> options = default)
         {
-            options = options ?? (opts => new RequestTelemetryEnhancerOptions());
+            options ??= (opts => new RequestTelemetryEnhancerOptions());
             services.Configure(options);
             return services;
         }

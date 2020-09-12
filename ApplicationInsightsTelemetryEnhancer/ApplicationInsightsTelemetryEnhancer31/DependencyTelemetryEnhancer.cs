@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Net.Http;
 
-namespace ApplicationInsightsTelemetryEnhancer22
+namespace ApplicationInsightsTelemetryEnhancer31
 {
     public class DependencyTelemetryEnhancer : ITelemetryInitializer
     {
@@ -42,7 +42,7 @@ namespace ApplicationInsightsTelemetryEnhancer22
     {
         public static IServiceCollection AddDependencyTelemetryEnhancer(this IServiceCollection services, Action<DependencyTelemetryEnhancerOptions> options = default)
         {
-            options = options ?? (opts => new DependencyTelemetryEnhancerOptions());
+            options ??= (opts => new DependencyTelemetryEnhancerOptions());
             services.Configure(options);
             return services.AddSingleton<ITelemetryInitializer, DependencyTelemetryEnhancer>();
         }
