@@ -10,8 +10,11 @@ Add data to Microsoft Azure Application Insights
 Only .Net Core 2.2 and .Net Core 3.1 are currently supported
 
 ## Installing
-You can search for this package in the Package Manager UI in Visual Studio, or see other installation instructions here:
+### You can search for this package in the Package Manager UI in Visual Studio, or see other installation instructions here:
 https://www.nuget.org/packages/ApplicationInsightsTelemetryEnhancer
+### Make sure you get the correct version for your app.
+- Version 2.2.* is for .Net Core 2.2
+- Version 3.1.* is for .Net Core 3.1
 
 ## Usage
 ### Operation Id Response Header
