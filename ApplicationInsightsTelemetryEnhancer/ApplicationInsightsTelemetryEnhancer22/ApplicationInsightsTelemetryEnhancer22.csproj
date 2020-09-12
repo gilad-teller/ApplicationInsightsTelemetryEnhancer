@@ -8,6 +8,8 @@
     <PackageId>ApplicationInsightsTelemetryEnhancer</PackageId>
     <Description>Enhancing Microsoft Azure Application Insights Telemetry with request and response body for your application enpoints and for any HTTP dependency.</Description>
     <PackageProjectUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</PackageProjectUrl>
+	<PackageLicenseUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</RepositoryUrl>
     <RepositoryType>Git Hub</RepositoryType>
     <PackageTags>Application Insights ApplicationInsights Telemetry Azure Request Response Body</PackageTags>
