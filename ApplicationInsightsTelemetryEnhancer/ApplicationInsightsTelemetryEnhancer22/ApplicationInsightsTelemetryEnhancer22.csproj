@@ -1,19 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Version>2.2.0</Version>
     <Authors>Gilad Teller</Authors>
     <Product>Application Insights Telemetry Enhancer</Product>
+    <Title>Application Insights Telemetry Enhancer</Title>
     <PackageId>ApplicationInsightsTelemetryEnhancer</PackageId>
     <Description>Enhancing Microsoft Azure Application Insights Telemetry with request and response body for your application enpoints and for any HTTP dependency.</Description>
+    <Summary>Enhancing Microsoft Azure Application Insights Telemetry with request and response body for your application enpoints and for any HTTP dependency.</Summary>
     <PackageProjectUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</PackageProjectUrl>
-	<PackageLicenseUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</RepositoryUrl>
     <RepositoryType>Git Hub</RepositoryType>
     <PackageTags>Application Insights ApplicationInsights Telemetry Azure Request Response Body</PackageTags>
     <PackageReleaseNotes>For use with ASP.Net Core 2.2</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +26,13 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
