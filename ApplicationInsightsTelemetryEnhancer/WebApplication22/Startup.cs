@@ -30,6 +30,8 @@ namespace WebApplication22
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //You must add Application Insights Telemetry seperately from the other features.
             services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_INSTRUMENTATIONKEY"]);
 
             //It is not required to add the OperationIdHeader service. Without it, the header will be the default "Operation-Id"
@@ -44,7 +46,10 @@ namespace WebApplication22
             //});
 
             //To add request + response body to dependencies with default values, use AddDependencyTelemetryEnhancer without any parameters
-            //services.AddDependencyTelemetryEnhancer();
+            services.AddDependencyTelemetryEnhancer();
+
+            //To add request + response body to dependencies with custom keys, you can use a cunfiguration section.
+            //services.AddDependencyTelemetryEnhancer(Configuration.GetSection("DependencyTelemetryEnhancer"));
 
             //To add request + response body to dependencies with custom keys, you can use the options action.
             //services.AddDependencyTelemetryEnhancer(options =>
@@ -53,8 +58,17 @@ namespace WebApplication22
             //    options.ResponsePropertyKey = "ResponseOptions";
             //});
 
-            //To add request + response body to dependencies with custom keys, you can use a cunfiguration section.
-            services.AddDependencyTelemetryEnhancer(Configuration.GetSection("DependencyTelemetryEnhancer"));
+            //It is not required to add the RequestTelemetryEnhancer service. Without it, the request and response keys will be the default "Request" and "Response"
+
+            //To set custom keys to your request telemetry, you can use a configuration section.
+            //services.AddRequestTelemetryEnhancer(Configuration.GetSection("RequestTelemetryEnhancer"));
+
+            //To set custom keys to your request telemetry, you can use the options action.
+            services.AddRequestTelemetryEnhancer(options =>
+            {
+                options.RequestPropertyKey = "RequestOptions";
+                options.ResponsePropertyKey = "ResponseOptions";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,12 +80,14 @@ namespace WebApplication22
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
-            //Add this line to add Application Insights Operation Id as a response header to your app
+            //Add this line to add Application Insights Operation Id as a response header to your app. You can customize it in the ConfigureServices method.
             app.UseOperationIdHeader();
+
+            //Add this line to add the request and response body to your request telemetry.You can customize it in the ConfigureServices method.
+            app.UseRequestTelemetryEnhancer();
 
             app.UseHttpsRedirection();
             app.UseMvc();
