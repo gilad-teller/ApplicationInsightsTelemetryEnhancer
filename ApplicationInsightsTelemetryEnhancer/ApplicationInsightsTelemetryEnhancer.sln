@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationInsightsTelemetr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationInsightsTelemetryEnhancer50", "ApplicationInsightsTelemetryEnhancer50\ApplicationInsightsTelemetryEnhancer50.csproj", "{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication50", "WebApplication50\WebApplication50.csproj", "{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
