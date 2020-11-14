@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication31", "WebApplication31\WebApplication31.csproj", "{E040A1F6-A7F8-458B-8310-7C8071023023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication31", "WebApplication31\WebApplication31.csproj", "{E040A1F6-A7F8-458B-8310-7C8071023023}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication22", "WebApplication22\WebApplication22.csproj", "{C696357A-2151-44F2-AA0B-3D023447A2FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication22", "WebApplication22\WebApplication22.csproj", "{C696357A-2151-44F2-AA0B-3D023447A2FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationInsightsTelemetryEnhancer22", "ApplicationInsightsTelemetryEnhancer22\ApplicationInsightsTelemetryEnhancer22.csproj", "{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationInsightsTelemetryEnhancer22", "ApplicationInsightsTelemetryEnhancer22\ApplicationInsightsTelemetryEnhancer22.csproj", "{93E7609E-BE0B-4014-B4FF-3A7DF5CDAF4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationInsightsTelemetryEnhancer31", "ApplicationInsightsTelemetryEnhancer31\ApplicationInsightsTelemetryEnhancer31.csproj", "{00BFA098-0B8C-44FD-AD9A-CB24086C8CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationInsightsTelemetryEnhancer31", "ApplicationInsightsTelemetryEnhancer31\ApplicationInsightsTelemetryEnhancer31.csproj", "{00BFA098-0B8C-44FD-AD9A-CB24086C8CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationInsightsTelemetryEnhancer50", "ApplicationInsightsTelemetryEnhancer50\ApplicationInsightsTelemetryEnhancer50.csproj", "{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication50", "WebApplication50\WebApplication50.csproj", "{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{00BFA098-0B8C-44FD-AD9A-CB24086C8CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00BFA098-0B8C-44FD-AD9A-CB24086C8CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00BFA098-0B8C-44FD-AD9A-CB24086C8CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C835EDD8-5ACD-4414-AE43-807D5CB4CD54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E09FFE1-D78B-4802-B5FD-11620BA0AC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
