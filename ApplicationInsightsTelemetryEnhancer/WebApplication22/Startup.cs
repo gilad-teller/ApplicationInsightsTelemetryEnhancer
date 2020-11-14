@@ -86,7 +86,7 @@ namespace WebApplication22
             //Add this line to add Application Insights Operation Id as a response header to your app. You can customize it in the ConfigureServices method.
             app.UseOperationIdHeader();
 
-            //Add this line to add the request and response body to your request telemetry.You can customize it in the ConfigureServices method.
+            //Add this line to add the request and response body to your request telemetry. You can customize it in the ConfigureServices method.
             app.UseRequestTelemetryEnhancer();
 
             app.UseHttpsRedirection();
