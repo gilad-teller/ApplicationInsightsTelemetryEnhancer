@@ -7,7 +7,7 @@ Add data to Microsoft Azure Application Insights
 - Add request and response body to Application Insights Dependency Telemetry. You will see the body of every API call your app makes to external APIs.
 
 ## ASP.Net support
-Only .Net Core 2.2 and .Net Core 3.1 are currently supported
+Only .Net Core 2.2 .Net Core 3.1 and .Net 5.0 are currently supported
 
 ## Installing
 ### You can search for this package in the Package Manager UI in Visual Studio, or see other installation instructions here:
@@ -15,6 +15,7 @@ https://www.nuget.org/packages/ApplicationInsightsTelemetryEnhancer
 ### Make sure you get the correct version for your app.
 - Version 2.2.* is for .Net Core 2.2
 - Version 3.1.* is for .Net Core 3.1
+- Version 5.0.* is for .Net 5.0
 
 ## Usage
 ### Operation Id Response Header
