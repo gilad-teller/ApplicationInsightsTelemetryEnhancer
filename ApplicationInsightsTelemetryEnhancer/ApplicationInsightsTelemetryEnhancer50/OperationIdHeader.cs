@@ -21,7 +21,14 @@ namespace ApplicationInsightsTelemetryEnhancer50
 
         public async Task InvokeAsync(HttpContext httpContext)
         {
-            httpContext.Response.Headers.Add(_options.HeaderName, System.Diagnostics.Activity.Current?.RootId);
+            httpContext.Response.OnStarting(async state =>
+            {
+                if (state is HttpContext completedContext)
+                {
+                    completedContext.Response.Headers.Add(_options.HeaderName, System.Diagnostics.Activity.Current?.RootId);
+                    await Task.CompletedTask;
+                }
+            }, httpContext);
             await _next(httpContext);
         }
     }
