@@ -78,10 +78,6 @@ namespace ApplicationInsightsTelemetryEnhancer22
                     }
                 }
             }
-            catch
-            {
-                return null;
-            }
             finally
             {
                 httpContext.Response.Body = originalBody;

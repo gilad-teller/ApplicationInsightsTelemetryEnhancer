@@ -72,10 +72,6 @@ namespace ApplicationInsightsTelemetryEnhancer50
                 await memoryStream.CopyToAsync(originalBody);
                 return responseBody;
             }
-            catch
-            {
-                return null;
-            }
             finally
             {
                 httpContext.Response.Body = originalBody;
