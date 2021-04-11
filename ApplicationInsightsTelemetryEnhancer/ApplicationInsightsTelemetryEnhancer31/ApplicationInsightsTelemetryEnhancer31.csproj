@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>ApplicationInsightsTelemetryEnhancer</PackageId>
-    <Version>3.1.0</Version>
+    <Version>3.1.1</Version>
     <Authors>Gilad Teller</Authors>
     <Company>Gilad Teller</Company>
     <Product>Application Insights Telemetry Enhancer</Product>
@@ -16,7 +16,9 @@
     <RepositoryUrl>https://github.com/gilad-teller/ApplicationInsightsTelemetryEnhancer</RepositoryUrl>
     <RepositoryType>Git Hub</RepositoryType>
     <PackageTags>Application Insights ApplicationInsights Telemetry Azure Request Response Body</PackageTags>
-    <PackageReleaseNotes>For use with ASP.Net Core 3.1</PackageReleaseNotes>
+    <PackageReleaseNotes>For use with ASP.Net Core 3.1
+
+- Version 3.1.1: Fix issue of returning 200 OK when an exception is thrown in user code</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
