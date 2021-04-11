@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace WebApplication31
 {
@@ -29,6 +30,10 @@ namespace WebApplication31
             }).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler()
             {
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+            });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication31", Version = "v1" });
             });
 
             //You must add Application Insights Telemetry seperately from the other features.
@@ -77,6 +82,8 @@ namespace WebApplication31
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication31 v1"));
             }
 
             //Add this line to add Application Insights Operation Id as a response header to your app. You can customize it in the ConfigureServices method.
